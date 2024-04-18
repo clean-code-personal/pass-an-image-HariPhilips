@@ -20,8 +20,11 @@ struct Image
 
 	~Image()
 	{
-		std::cout << "Image destroyed" << std::endl;
-		delete m_pixels;
+		if (m_pixels != nullptr)
+		{
+			std::cout << "Image destroyed" << std::endl;
+			delete[] m_pixels;
+		}
 	}
 };
 

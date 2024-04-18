@@ -6,6 +6,7 @@ ImageBrightener::ImageBrightener(const Image& inputImage) : m_inputImage(inputIm
 
 ImageBrightener::ImageBrightener(Image&& inputImage) : m_inputImage(inputImage)
 {
+	inputImage.m_pixels = nullptr;
 }
 
 int ImageBrightener::BrightenWholeImage()
